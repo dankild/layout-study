@@ -454,8 +454,8 @@ body .menu .menu__body .menu_button {
 
 body .content .promotion {
   position: relative;
-  -webkit-transform: translate(-25%, -25%);
-          transform: translate(-25%, -25%);
+  -webkit-transform: translate(-5%, -15%);
+          transform: translate(-5%, -15%);
   width: 453px;
 }
 
@@ -743,7 +743,7 @@ body .footer .footer__copyright .copyright__text {
   border: 35px solid #E7F5F8;
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1340px) and (max-width: 940px) {
   body .menu .menu__body .menu__logo {
     margin: 0 0 0 20px;
   }
@@ -795,6 +795,9 @@ body .footer .footer__copyright .copyright__text {
   body .menu .menu__body .menu__buttons-pc {
     display: none;
   }
+}
+
+@media (max-width: 1340px) {
   body .content .content-head .content-head__inner {
     left: 50%;
     -webkit-transform: translate(-50%, 0);

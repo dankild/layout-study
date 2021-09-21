@@ -2,7 +2,8 @@ body{
 
 	.container{}
 
-	.menu{
+	@media(max-width: 940px){
+		.menu{
 		.menu__body{
 			.menu__logo{
 				margin: 0 0 0 20px;
@@ -52,6 +53,7 @@ body{
 				display:none;
 			}
 		}
+	}
 	}
 
 	.content{
