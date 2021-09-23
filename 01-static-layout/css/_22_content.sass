@@ -1,0 +1,202 @@
+.content
+	.content-body
+		& >div
+			margin: 30px auto
+
+		.content-body__row1
+			display: grid
+			min-height: 580px
+			grid-template-areas: 'a a d d' 'b c d d'
+			grid-template-columns: 25% 25% 25% 25%
+
+			@mixin picture_config($img, $area)
+				@include bg($img)
+				grid-area: $area
+				border: 11px solid #fff
+			
+			.content-body__pic1
+				@include picture_config("row1_1", a)
+			
+			.content-body__pic2
+				@include picture_config("row1_2", b)
+			
+			.content-body__pic3
+				background-position: left
+				@include picture_config("row1_3", c)
+			
+			.content-body__pic4
+				background-position: right
+				position: relative
+				@include picture_config("row1_4", d)
+				.text
+					transition: all 1s
+					background-color: #fff
+					text-transform: uppercase
+					display: inline-block
+					position: absolute
+					left: 28px
+					bottom: 25px
+					padding: 4px 24px
+					@include text_config(18px, 600, 27px)
+					@media(max-width:  $mobile)
+						left: 50%
+						padding: 4px 4px
+						transform: translate(-50%, 0)
+						@include text_config(14px, 600, 27px)
+
+			@media(max-width: $row1-bp)
+				grid-template-areas: 'a b' 'c d'
+				grid-template-columns: 50% 50%
+
+		.products
+			display: flex
+			flex-direction: column
+
+			.content-body__title
+				text-transform: uppercase
+				text-align: center
+				@include text_config(20px, 700, 30px)
+				margin: 0 0 15px 0
+			
+			.content-body__text
+				text-align: center
+				@include text_config(15px, 400, 22.5px)
+				margin: 0 0 65px 0
+			
+			.content-body__cards
+				display: grid	
+				grid-template-columns: repeat(4, 1fr)
+
+				@media(max-width: $card-bp)
+					grid-template-columns: repeat(2, 1fr)
+					margin: 0 auto
+
+				.card
+					margin: 0 15px
+					width: 250px
+
+					@media(max-width: $card-bp)
+						margin: 0 50px
+						width: 320px
+					
+					.card__pic
+						height: 371px
+						margin: 0 0 38px 0
+						background-position: top
+					
+					.card__text1
+						@include text_config(15px, 300, 23px)
+					
+					.card__text2
+						@include text_config(15px, 600, 23px)
+					
+					.card__cost
+						display: flex
+						margin: 0 0 30px 0
+
+						.card__oldcost
+							text-decoration: line-through
+							@include text_config(15px, 400, 23px)
+							padding: 0 30px 0 0
+						
+						.card__newcost
+							color: #CF2929
+							@include text_config(15px, 400, 23px)
+						
+		.content-body__row2
+			.pic1
+				@include bg("row2_1") 
+				grid-area: a
+			
+			.pic2
+				@include bg("row2_2") 
+				grid-area: b
+			
+			.pic3
+				@include bg("row2_3") 
+				grid-area: c
+			
+			.pic4
+				@include bg("row2_4") 
+				grid-area: d
+			
+		
+		.content-body__row3
+			.pic1
+				@include bg("row3_1") 
+				grid-area: a
+			
+			.pic2
+				@include bg("row3_2") 
+				grid-area: b
+			
+			.pic3
+				@include bg("row3_3") 
+				grid-area: c
+			
+			.pic4
+				@include bg("row3_4") 
+				grid-area: d
+			
+		
+		.content-body__row4
+			transition: all 1s
+
+			.content-body__pics
+				position: relative
+				height: 690px
+				display: grid
+
+				transition: all 1s
+				
+				@mixin avone($w, $h, $img, $pos, $area)
+					@include bg($img)
+					grid-area: $area
+					position: absolute
+					width: $w/1130*100%
+					height: $h/645*100%
+					background-position: $pos
+
+					@media(max-width: $menu-bp)
+						width: 100%
+						height: 100%
+						border: 3px solid #fff
+						
+				
+				.pic1
+					@include avone(585, 550, "row4_1", top right, a)
+					bottom: 0px
+					left: 0px
+				
+				.pic2
+					@include avone(514, 451, "row4_2", center, b)
+					right: 0px
+				
+				.pic3
+					@include avone(271, 325, "row2_1", top, c)
+					border: 22px solid #fff
+					border-bottom: 0
+					border-right: 0
+					bottom: 0px
+					right: 0px
+				
+				.text
+					position: absolute
+					@include text_config(15px, 400, 22.5px)
+					border-bottom: 1px solid #000
+					right: 274/1130*100%
+					bottom: 40px
+					padding: 0 0 4px 0
+					@media(max-width: $menu-bp)
+						padding: 4px
+						background: #fff
+						transform: translate(100%, 100%)
+				
+				@media(max-width: $menu-bp)
+					height: 590px
+					width: 95%
+					margin: 0 auto 30px
+					grid-template-areas: 'a a a b b' 'a a a c c' 'a a a c c'
+				
+				@media(max-width: $mobile)
+					height: 430px

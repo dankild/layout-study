@@ -1,0 +1,70 @@
+.content
+	.promotion
+		position: relative
+		transform: translate(-5%, -15%)
+		width: 453px
+		text-transform: uppercase
+		transition: all 1s
+
+		.promotion__pre-title
+			@include text_config(18px, 600, 27px)
+		
+		.promotion__title
+			@include text_config(80px, 700, 120px)
+		
+		.promotion__text
+			@include text_config(18px, 600, 27px)
+			margin: 0 0 27px 0
+			text-transform: none
+		
+		.promotion__button
+			@include text_config(18px, 500, 27px)
+			padding: 4px 29px
+			color: white
+			background-color: black
+		
+		@media(max-width: $mobile)
+			div
+				transition: all 1s
+				text-align: center
+			
+			.promotion__pre-title
+				text-shadow: #fff 5px 0 3px
+			.promotion__title
+				text-shadow: #fff 5px 0 3px
+			.promotion__text
+				text-shadow: #fff 5px 0 3px
+		
+	
+	.content-head
+		height: 745px
+		margin: 100px 0 0 0
+		@include bg('ch_1')
+		background-position: 35%
+
+		.content-head__inner
+			left: 910px
+			top: 445px
+			.content-head__buttons
+				display: flex
+				transition: all 1s
+				.content-head__space
+					width: 35px
+				
+			@media(max-width: $medium)
+				left: 50%
+				transform: translate(-50%,0)
+				.content-head__buttons
+					justify-content: center
+	
+	.content-footer
+		@include bg('ft_1')
+		background-position: 87%
+		height: 745px
+		.content-footer__inner
+			position: relative
+			top: 430/745*100%
+			left: 230/1593*100%
+			@media(max-width: $medium)
+				left: 50%
+				transform: translate(-50%,0)
