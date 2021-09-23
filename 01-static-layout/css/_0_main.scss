@@ -19,6 +19,9 @@ body{
 		text-transform: uppercase;
 		a{
 			color: #000;
+			&:hover{
+				text-shadow: #888 3px 0 3px;
+			}
 		}
 		.menu__body{
 			margin: 0 20px;

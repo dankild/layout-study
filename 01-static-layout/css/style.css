@@ -90,6 +90,10 @@ body .menu a {
   color: #000;
 }
 
+body .menu a:hover {
+  text-shadow: #888 3px 0 3px;
+}
+
 body .menu .menu__body {
   margin: 0 20px;
   display: -webkit-box;
