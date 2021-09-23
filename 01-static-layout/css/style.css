@@ -421,18 +421,6 @@ body {
   line-height: 27px;
 }
 
-@media (max-width: 990px) {
-  .content .content-body .content-body__row1 .content-body__pic4 .text {
-    left: 50%;
-    padding: 4px 4px;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 27px;
-  }
-}
-
 @media (max-width: 65rem) {
   .content .content-body .content-body__row1 {
         grid-template-areas: 'a a c' 'b d d' 'b d d';
