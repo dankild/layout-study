@@ -186,6 +186,9 @@ body {
 }
 
 @media (max-width: 1030px) {
+  .menu .menu__body {
+    margin: 10px 20px;
+  }
   .menu .menu__body .menu__nav {
     position: relative;
     padding: 0 20px;
