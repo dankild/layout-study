@@ -9,25 +9,27 @@
 			grid-template-areas: 'a a d d' 'b c d d'
 			grid-template-columns: 25% 25% 25% 25%
 
-			@mixin picture_config($img, $area)
+			@mixin picture_config($img, $h, $area)
 				@include bg($img)
 				grid-area: $area
 				border: 11px solid #fff
+				@media(max-width: $row1-bp)
+					height: $h
 			
 			.content-body__pic1
-				@include picture_config("row1_1", a)
+				@include picture_config("row1_1", 250px, a)
 			
 			.content-body__pic2
-				@include picture_config("row1_2", b)
+				@include picture_config("row1_2", 400px, b)
 			
 			.content-body__pic3
 				background-position: left
-				@include picture_config("row1_3", c)
+				@include picture_config("row1_3", 250px, c)
 			
 			.content-body__pic4
 				background-position: right
 				position: relative
-				@include picture_config("row1_4", d)
+				@include picture_config("row1_4", 400px, d)
 				.text
 					transition: all 1s
 					background-color: #fff
@@ -142,6 +144,8 @@
 				height: 690px
 				display: grid
 				transition: all 1s
+				width: 95%
+				margin: 0 auto
 				
 				@mixin avone($w, $h, $img, $pos, $area)
 					@include bg($img)
@@ -155,7 +159,7 @@
 						width: 100%
 						height: 100%
 						border: 9px solid #fff
-						background-position: center
+						background-position: $pos
 						
 				
 				.pic1
@@ -164,7 +168,7 @@
 					left: 0px
 				
 				.pic2
-					@include avone(514, 451, "row4_2", center, b)
+					@include avone(514, 451, "row4_2", top, b)
 					right: 0px
 				
 				.pic3
@@ -185,12 +189,7 @@
 					@media(max-width: $menu-bp)
 						padding: 4px
 						background: #fff
-						transform: translate(100%, 100%)
+						transform: translate(110%, 80%)
 				
 				@media(max-width: $menu-bp)
-					margin: 0 auto
-					width: 95%
 					grid-template-areas: 'a a a b b' 'a a a c c' 'a a a c c'
-				
-				@media(max-width: $mobile)
-					height: 550px
