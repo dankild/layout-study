@@ -6,6 +6,7 @@
 		.content-body__row1
 			display: grid
 			min-height: 580px
+			transition: all 2s
 			grid-template-areas: 'a a d d' 'b c d d'
 			grid-template-columns: 25% 25% 25% 25%
 
@@ -41,9 +42,15 @@
 					padding: 4px 24px
 					@include text_config(18px, 600, 27px)
 
+			@media(max-width: 68rem)
+				opacity: 0.01
+				border-radius: 50%
+
 			@media(max-width: $row1-bp)
+				opacity: 1.0
 				grid-template-areas: 'a a c' 'b d d' 'b d d'
 				grid-template-columns: repeat(3, 1fr)
+							
 
 		.products
 			display: flex
@@ -191,5 +198,11 @@
 						background: #fff
 						transform: translate(110%, 80%)
 				
+
+				@media(max-width: 1070px)
+					opacity: 0.01
+					border-radius: 50%
+
 				@media(max-width: $menu-bp)
+					opacity: 1.0
 					grid-template-areas: 'a a a b b' 'a a a c c' 'a a a c c'
