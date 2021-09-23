@@ -10,27 +10,30 @@
 			grid-template-areas: 'a a d d' 'b c d d'
 			grid-template-columns: 25% 25% 25% 25%
 
-			@mixin picture_config($img, $h, $area)
+			@mixin picture_config($img, $h)
 				@include bg($img)
-				grid-area: $area
 				border: 11px solid #fff
 				@media(max-width: $row1-bp)
 					height: $h
 			
 			.content-body__pic1
-				@include picture_config("row1_1", 250px, a)
+				@include picture_config("row1_1", 250px)
+				grid-area: a
 			
 			.content-body__pic2
-				@include picture_config("row1_2", 400px, b)
+				@include picture_config("row1_2", 400px)
+				grid-area: b
 			
 			.content-body__pic3
 				background-position: left
-				@include picture_config("row1_3", 250px, c)
+				@include picture_config("row1_3", 250px)
+				grid-area: c
 			
 			.content-body__pic4
 				background-position: right
 				position: relative
-				@include picture_config("row1_4", 400px, d)
+				@include picture_config("row1_4", 400px)
+				grid-area: d
 				.text
 					transition: all 1s
 					background-color: #fff
@@ -41,10 +44,6 @@
 					bottom: 25px
 					padding: 4px 24px
 					@include text_config(18px, 600, 27px)
-
-			@media(max-width: 68rem)
-				opacity: 0.01
-				border-radius: 50%
 
 			@media(max-width: $row1-bp)
 				opacity: 1.0
@@ -154,9 +153,8 @@
 				width: 95%
 				margin: 0 auto
 				
-				@mixin avone($w, $h, $img, $pos, $area)
+				@mixin avone($w, $h, $img, $pos)
 					@include bg($img)
-					grid-area: $area
 					position: absolute
 					width: $w/1130*100%
 					height: $h/645*100%
@@ -170,16 +168,19 @@
 						
 				
 				.pic1
-					@include avone(585, 550, "row4_1", top right, a)
+					@include avone(585, 550, "row4_1", top right)
+					grid-area: a
 					bottom: 0px
 					left: 0px
 				
 				.pic2
-					@include avone(514, 451, "row4_2", top, b)
+					@include avone(514, 451, "row4_2", top)
+					grid-area: b
 					right: 0px
 				
 				.pic3
-					@include avone(271, 325, "row2_1", top, c)
+					@include avone(271, 325, "row2_1", top)
+					grid-area: c
 					border: 22px solid #fff
 					border-bottom: 0
 					border-right: 0
@@ -198,11 +199,6 @@
 						background: #fff
 						transform: translate(110%, 80%)
 				
-
-				@media(max-width: 1070px)
-					opacity: 0.01
-					border-radius: 50%
-
 				@media(max-width: $menu-bp)
 					opacity: 1.0
 					grid-template-areas: 'a a a b b' 'a a a c c' 'a a a c c'
