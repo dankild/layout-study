@@ -45,8 +45,8 @@
 						@include text_config(14px, 600, 27px)
 
 			@media(max-width: $row1-bp)
-				grid-template-areas: 'a b' 'c d'
-				grid-template-columns: 50% 50%
+				grid-template-areas: 'a a c' 'b d d' 'b d d'
+				grid-template-columns: repeat(3, 1fr)
 
 		.products
 			display: flex
@@ -146,7 +146,6 @@
 				position: relative
 				height: 690px
 				display: grid
-
 				transition: all 1s
 				
 				@mixin avone($w, $h, $img, $pos, $area)
@@ -160,7 +159,8 @@
 					@media(max-width: $menu-bp)
 						width: 100%
 						height: 100%
-						border: 3px solid #fff
+						border: 9px solid #fff
+						background-position: center
 						
 				
 				.pic1
@@ -193,10 +193,9 @@
 						transform: translate(100%, 100%)
 				
 				@media(max-width: $menu-bp)
-					height: 590px
+					margin: 0 auto
 					width: 95%
-					margin: 0 auto 30px
 					grid-template-areas: 'a a a b b' 'a a a c c' 'a a a c c'
 				
 				@media(max-width: $mobile)
-					height: 430px
+					height: 550px
