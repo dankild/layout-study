@@ -263,6 +263,18 @@ body {
   text-transform: none;
 }
 
+.content .promotion .promotion__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.content .promotion .promotion__space {
+  width: 35px;
+}
+
 .content .promotion .promotion__button {
   font-size: 18px;
   font-weight: 500;
@@ -326,18 +338,6 @@ body {
 .content .content-head .content-head__inner {
   left: 910px;
   top: 445px;
-}
-
-.content .content-head .content-head__inner .content-head__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.content .content-head .content-head__inner .content-head__buttons .content-head__space {
-  width: 35px;
 }
 
 @media (max-width: 1340px) {
