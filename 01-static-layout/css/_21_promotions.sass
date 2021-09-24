@@ -22,18 +22,24 @@
 			padding: 4px 29px
 			color: white
 			background-color: black
+			&:hover
+				color: black 
+				background-color: white
 		
 		@media(max-width: $mobile)
+			width: 360px
 			div
-				transition: all 1s
 				text-align: center
 			
 			.promotion__pre-title
-				text-shadow: #fff 5px 0 3px
+				@include text_config(18px, 600, 27px)
+			
 			.promotion__title
-				text-shadow: #fff 5px 0 3px
+				@include text_config(64px, 700, 120px)
+			
 			.promotion__text
-				text-shadow: #fff 5px 0 3px
+				@include text_config(18px, 600, 27px)
+			
 		
 	
 	.content-head
@@ -43,8 +49,11 @@
 		background-position: 35%
 		transition: all 1s
 
-		@media(max-width: $menu-bp)
+		@media(max-width: $tablet)
 			margin: 60px 0 0 0
+
+		@media(max-width: $mobile)
+			background-position: 36%
 
 		.content-head__inner
 			left: 910px
@@ -65,6 +74,11 @@
 		@include bg('ft_1')
 		background-position: 87%
 		height: 745px
+
+
+		@media(max-width: $mobile)
+			background-position: 86%
+
 		.content-footer__inner
 			position: relative
 			top: 430/745*100%

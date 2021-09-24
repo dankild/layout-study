@@ -10,12 +10,17 @@
 			grid-template-areas: 'a a d d' 'b c d d'
 			grid-template-columns: 25% 25% 25% 25%
 
+			@media(max-width: $mobile)	
+				min-height: 300px
+
 			@mixin picture_config($img, $h)
 				@include bg($img)
 				border: 11px solid #fff
-				@media(max-width: $row1-bp)
+				@media(max-width: $tablet)
 					height: $h
-			
+				@media(max-width: $mobile)	
+					height: $h * 0.8
+				
 			.content-body__pic1
 				@include picture_config("row1_1", 250px)
 				grid-area: a
@@ -45,11 +50,22 @@
 					padding: 4px 24px
 					@include text_config(18px, 600, 27px)
 
-			@media(max-width: $row1-bp)
-				opacity: 1.0
+					@media(max-width: $mobile)					
+						@include text_config(14px, 600, 27px)
+
+			@media(max-width: $tablet)
 				grid-template-areas: 'a a c' 'b d d' 'b d d'
 				grid-template-columns: repeat(3, 1fr)
-							
+
+				.content-body__pic2
+					background-position: 55%
+
+				.content-body__pic3
+					background-position: 20%
+				
+				.content-body__pic4
+					background-position: top right
+			
 
 		.products
 			display: flex
@@ -69,19 +85,21 @@
 			.content-body__cards
 				display: grid	
 				grid-template-columns: repeat(4, 1fr)
+				margin: 0 auto
 
-				@media(max-width: $card-bp)
+				@media(max-width: $tablet)
 					grid-template-columns: repeat(2, 1fr)
-					margin: 0 auto
+
+				@media(max-width: 730px)
+					grid-template-columns: 1fr
 
 				.card
-					margin: 0 15px
+					padding: 0 15px
 					width: 250px
 
-					@media(max-width: $card-bp)
-						margin: 0 50px
-						width: 320px
-					
+					@media(max-width: $tablet)
+						width: 350px
+										
 					.card__pic
 						height: 371px
 						margin: 0 0 38px 0
@@ -160,7 +178,7 @@
 					height: $h/645*100%
 					background-position: $pos
 
-					@media(max-width: $menu-bp)
+					@media(max-width: $tablet)
 						width: 100%
 						height: 100%
 						border: 9px solid #fff
@@ -194,11 +212,23 @@
 					right: 274/1130*100%
 					bottom: 40px
 					padding: 0 0 4px 0
-					@media(max-width: $menu-bp)
-						padding: 4px
+					@media(max-width: $tablet)
+						padding: 18px
 						background: #fff
-						transform: translate(110%, 80%)
 				
-				@media(max-width: $menu-bp)
+				@media(max-width: $tablet)
 					opacity: 1.0
 					grid-template-areas: 'a a a b b' 'a a a c c' 'a a a c c'
+					.pic1
+						background-position: 74%
+					.text
+						padding: 18px
+						background: #fff
+				
+				@media(max-width: $mobile)
+					.pic1
+						background-position: 64%
+					.pic2
+						background-position: 30%
+					.pic3
+						background-position: 30%
