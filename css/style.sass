@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap')
+
+@import "_reset"
+
+body
+	font-family: 'Poppins', sans-serif
+	transition: all 1s
+
+.wrapper
+	max-width: 1600px 
+	margin: 0 auto
+
+.container
+	max-width: 1130px
+	margin: 0 auto
+	
+@mixin text_config($fz, $fw, $lh)
+	font-size: $fz
+	font-weight: $fw
+	line-height: $lh
+
+@mixin bg($img)
+	background: url("../img/#{$img}.jpeg") 0 0/cover no-repeat
+	background-position: top
+
+$medium: 1340px
+$card-bp: 1130px
+$tablet: 1030px
+$phablet: 800px
+$mobile: 550px
+
+
+@import "_10_nav_menu"
+@import "_21_promotions"
+@import "_22_content"
+@import "_30_footer"
+

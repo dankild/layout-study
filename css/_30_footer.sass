@@ -1,0 +1,123 @@
+.footer
+	max-width: 1600px
+	background: #F2F8FC
+
+	.footer__row
+		display: flex
+		width: 100%	
+		padding: 110px 100px
+		justify-content: space-between
+
+		@media(max-width: $medium)
+			padding: 90px 100px
+
+		@media(max-width: $phablet)
+			padding: 50px 30px
+			div
+				text-align: center
+			
+			flex-direction: column
+		
+		@media(max-width: $mobile)
+			padding: 50px 10px
+
+		.footer__col1
+			width: 406px
+			@include text_config(15px, 400, 22.5px)
+
+			@media(max-width: $phablet)
+				order: 2
+				margin: 0 auto
+				width: 80%
+				.footer__social
+					justify-content: center
+
+			.footer__logo
+				@include text_config(25px, 700, 37.5px)
+				margin: 0 0 17px 0
+			
+			.footer__text
+				margin: 0 0 41px 0
+			
+			.footer__adress
+				margin: 0 0 16px 0
+				ipadding: 0 26px 0 0
+			
+			.footer__email
+				padding: 0 0 3px 0
+				margin: 0 0 4px 0
+				display: inline-block
+				border-bottom: 1px solid #000
+			
+			.footer__tel
+				margin: 0 0 16px 0
+			
+			.footer__social
+				display: flex
+				i
+					display: block
+				.fab
+					padding: 0 20px 0 0
+
+		.footer__col2
+			display: flex
+			flex-direction: column
+
+			@media(max-width: $phablet)
+				order: 1
+				margin: 0 auto 50px
+
+			.footer__updates
+				@include text_config(25px, 700, 37.5px)
+				margin: 0 0 24px 0
+			
+			.footer__inputmail
+				border-radius: 50%
+				.footer__form
+					display: grid
+					background-color: #fff
+					grid-template-columns: 5fr 1fr
+					margin: 0 0 70px 0
+
+					.form__inputmail
+						padding: 11px 23px
+						height: 45px
+						border: 0
+
+					.form__inputsubmit
+						@include text_config(15px, 600, 22.5px)
+						background-color: #fff
+				
+			.footer__sitemap
+				display: grid
+				$space: 88px
+
+				@media(max-width: $medium)
+					$space: 54px
+				
+				@media(max-width: $mobile)
+					$space: 7px
+
+				grid-template-columns: auto $space auto $space auto
+
+				.sitemap__col
+					display: flex
+					flex-direction: column
+
+					.sitemap__title
+						@include text_config(20px, 600, 30px)
+						margin: 0 0 27px 0
+						text-transform: uppercase
+					
+					.sitemap__text
+						@include text_config(15px, 400, 22.5px)
+						margin: 0 0 21px 0
+
+	.footer__copyright
+		background: #E7F5F8
+
+		.copyright__text
+			text-align: center
+			@include text_config(15px, 400, 22.5px)
+			padding: auto 35px
+			border: 35px solid #E7F5F8

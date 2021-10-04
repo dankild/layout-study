@@ -1,0 +1,90 @@
+.content
+	.promotion
+		position: relative
+		transform: translate(-5%, -15%)
+		width: 453px
+		text-transform: uppercase
+		transition: all 1s
+
+		.promotion__pre-title
+			@include text_config(18px, 600, 27px)
+		
+		.promotion__title
+			@include text_config(80px, 700, 120px)
+		
+		.promotion__text
+			@include text_config(18px, 600, 27px)
+			margin: 0 0 27px 0
+			text-transform: none
+		
+		.promotion__buttons
+			display: flex
+			transition: all 1s
+			
+		.promotion__space
+			width: 35px
+
+		.promotion__button
+			@include text_config(18px, 500, 27px)
+			padding: 4px 29px
+			color: white
+			background-color: black
+			&:hover
+				color: black 
+				background-color: white
+		
+		@media(max-width: $mobile)
+			width: 360px
+			div
+				text-align: center
+			
+			.promotion__pre-title
+				@include text_config(18px, 600, 27px)
+			
+			.promotion__title
+				@include text_config(64px, 700, 120px)
+			
+			.promotion__text
+				@include text_config(18px, 600, 27px)
+			
+		
+	
+	.content-head
+		height: 745px
+		margin: 100px 0 0 0
+		@include bg('ch_1')
+		background-position: 35%
+		transition: all 1s
+
+		@media(max-width: $tablet)
+			margin: 60px 0 0 0
+
+		@media(max-width: $mobile)
+			background-position: 36%
+
+		.content-head__inner
+			left: 910px
+			top: 445px
+				
+			@media(max-width: $medium)
+				left: 50%
+				transform: translate(-50%,0)
+				.content-head__buttons
+					justify-content: center
+	
+	.content-footer
+		@include bg('ft_1')
+		background-position: 87%
+		height: 745px
+
+
+		@media(max-width: $mobile)
+			background-position: 86%
+
+		.content-footer__inner
+			position: relative
+			top: 430/745*100%
+			left: 230/1593*100%
+			@media(max-width: $medium)
+				left: 50%
+				transform: translate(-50%,0)

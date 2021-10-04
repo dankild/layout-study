@@ -1,0 +1,100 @@
+.menu
+	display: block
+	position: fixed
+	background: #fff
+	top: 0
+	width: 100%
+	z-index: 10
+	text-transform: uppercase
+
+	max-width: 1600px
+	transition: all 1s
+
+	a
+		color: #000
+		&:hover
+			text-shadow: #888 3px 0 3px
+	
+	.menu__logo
+		@include text_config(28px, 700, 42px)
+
+	.menu__body
+		margin: 30px 20px
+
+		display: flex
+		justify-content: space-between
+		align-items: baseline
+
+		.menu__nav
+			display: flex
+			text-align: center
+			justify-content: space-evenly
+			a
+				@include text_config(18px, 400, 27px)
+			label
+				display: none
+			.menu__checkbox
+				display: none
+			
+			.menu__list
+				columns: 6
+				-webkit-columns: 6
+				-moz-columns: 6
+				.menu__buttons-mobile
+					display: none
+		
+		.menu__buttons
+			display: flex
+			justify-content: space-evenly
+			flex-direction: row
+			.space
+				width: 35px
+		
+		.menu_button
+			@include text_config(18px, 400, 18px)
+		
+	
+		@media(max-width: $tablet)	
+			margin: 10px 20px
+
+			.menu__nav
+				position: relative 
+				padding: 6px 0 0 20px
+
+				.menu__list
+					display: none
+					columns: 1
+					-webkit-columns: 1
+					-moz-columns: 1
+
+					.menu__buttons-mobile
+						display: flex
+				
+				.menu__checkbox
+					display: none
+
+				label
+					display: block
+					width: 30px
+					height: 30px
+					background: url("../img/menu.png")
+					background-size: contain
+					&:active
+						transform: rotate(360deg)
+						transition: all 0.3s
+					
+				
+				.menu__checkbox:checked + .menu__list
+					display: block
+					position: fixed
+					top: 64px
+					right: 0
+					li
+						width: 240px
+						margin: 0 3px 2px 0
+						padding: 14px
+						box-shadow: 1px 0 #aaa
+						background: #fff
+
+			.menu__buttons-pc
+				display: none
