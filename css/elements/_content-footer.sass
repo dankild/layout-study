@@ -1,0 +1,15 @@
+.content-footer
+	@include bg('ft_1')
+	background-position: 87%
+	height: 745px
+
+	@media(max-width: $mobile)
+		background-position: 86%
+
+	.content-footer__inner
+		position: relative
+		top: 430/745*100%
+		left: 230/1593*100%
+		@media(max-width: $medium)
+			left: 50%
+			transform: translate(-50%,0)
