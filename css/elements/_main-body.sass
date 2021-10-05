@@ -1,6 +1,11 @@
 .main-body
-	& >div
+	& section
 		margin: 30px auto
+
+	.main-body__text
+		text-align: center
+		@include text_config(15px, 400, 22.5px)
+		margin: 0 0 65px 0
 
 	.main-body__row1
 		display: grid
@@ -11,14 +16,6 @@
 
 		@media(max-width: $mobile)	
 			min-height: 300px
-
-		@mixin picture_config($img, $h)
-			@include bg($img)
-			border: 11px solid white
-			@media(max-width: $tablet)
-				height: $h
-			@media(max-width: $mobile)	
-				height: $h * 0.8
 			
 		.main-body__pic1
 			@include picture_config("row1_1", 250px)
@@ -69,11 +66,6 @@
 	.products
 		display: flex
 		flex-direction: column
-		
-		.main-body__text
-			text-align: center
-			@include text_config(15px, 400, 22.5px)
-			margin: 0 0 65px 0
 		
 		.main-body__cards
 			display: grid	

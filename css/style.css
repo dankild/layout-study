@@ -106,9 +106,6 @@ body .container {
 .card .card__pic {
   margin: 0 0 38px 0;
   height: 371px;
-}
-
-.card .card__pic img {
   width: 100%;
   margin: 0 auto 0;
 }
@@ -369,6 +366,7 @@ h1 {
 }
 
 h2 {
+  display: block;
   text-transform: uppercase;
   text-align: center;
   font-size: 20px;
@@ -538,8 +536,16 @@ header .menu .menu_button {
   }
 }
 
-.main-body > div {
+.main-body section {
   margin: 30px auto;
+}
+
+.main-body .main-body__text {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  margin: 0 0 65px 0;
 }
 
 .main-body .main-body__row1 {
@@ -697,14 +703,6 @@ header .menu .menu_button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.main-body .products .main-body__text {
-  text-align: center;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 22.5px;
-  margin: 0 0 65px 0;
 }
 
 .main-body .products .main-body__cards {

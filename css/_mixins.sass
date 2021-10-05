@@ -7,6 +7,13 @@
 	background: url("../img/#{$img}.jpeg") 0 0/cover no-repeat
 	background-position: top
 
+@mixin picture_config($img, $h)
+	@include bg($img)
+	border: 11px solid white
+	@media(max-width: $tablet)
+		height: $h
+	@media(max-width: $mobile)	
+		height: $h * 0.8
 
 @mixin avone($w, $h, $img, $pos)
 	@include bg($img)
