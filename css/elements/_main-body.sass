@@ -1,8 +1,8 @@
-.content-body
+.main-body
 	& >div
 		margin: 30px auto
 
-	.content-body__row1
+	.main-body__row1
 		display: grid
 		min-height: 580px
 		transition: all 2s
@@ -20,20 +20,20 @@
 			@media(max-width: $mobile)	
 				height: $h * 0.8
 			
-		.content-body__pic1
+		.main-body__pic1
 			@include picture_config("row1_1", 250px)
 			grid-area: a
 		
-		.content-body__pic2
+		.main-body__pic2
 			@include picture_config("row1_2", 400px)
 			grid-area: b
 		
-		.content-body__pic3
+		.main-body__pic3
 			background-position: left
 			@include picture_config("row1_3", 250px)
 			grid-area: c
 		
-		.content-body__pic4
+		.main-body__pic4
 			background-position: right
 			position: relative
 			@include picture_config("row1_4", 400px)
@@ -56,13 +56,13 @@
 			grid-template-areas: 'a a c' 'b d d' 'b d d'
 			grid-template-columns: repeat(3, 1fr)
 
-			.content-body__pic2
+			.main-body__pic2
 				background-position: 55%
 
-			.content-body__pic3
+			.main-body__pic3
 				background-position: 20%
 			
-			.content-body__pic4
+			.main-body__pic4
 				background-position: top right
 		
 
@@ -70,12 +70,12 @@
 		display: flex
 		flex-direction: column
 		
-		.content-body__text
+		.main-body__text
 			text-align: center
 			@include text_config(15px, 400, 22.5px)
 			margin: 0 0 65px 0
 		
-		.content-body__cards
+		.main-body__cards
 			display: grid	
 			grid-template-columns: repeat(4, 1fr)
 			margin: 0 auto
@@ -95,10 +95,10 @@
 			.pic4
 				grid-area: d
 		
-	.content-body__row4
+	.main-body__row4
 		transition: all 1s
 
-		.content-body__pics
+		.main-body__pics
 			position: relative
 			height: 690px
 			display: grid
