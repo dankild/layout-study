@@ -1,0 +1,33 @@
+.card
+	margin: 0 15px
+	width: 250px
+	transition: all 0.6s
+
+	@media(max-width: $tablet)
+		width: 290px
+						
+	.card__pic
+		margin: 0 0 38px 0
+		height: 371px
+		img
+			width: 100%
+			margin: 0 auto 0
+	
+	.card__text1
+		@include text_config(15px, 300, 23px)
+	
+	.card__text2
+		@include text_config(15px, 600, 23px)
+	
+	.card__cost
+		display: flex
+		margin: 0 0 30px 0
+
+		.card__oldcost
+			text-decoration: line-through
+			@include text_config(15px, 400, 23px)
+			padding: 0 30px 0 0
+		
+		.card__newcost
+			color: red
+			@include text_config(15px, 400, 23px)

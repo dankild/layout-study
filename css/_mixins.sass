@@ -1,0 +1,22 @@
+@mixin text_config($fz, $fw, $lh)
+	font-size: $fz
+	font-weight: $fw
+	line-height: $lh
+
+@mixin bg($img)
+	background: url("../img/#{$img}.jpeg") 0 0/cover no-repeat
+	background-position: top
+
+
+@mixin avone($w, $h, $img, $pos)
+	@include bg($img)
+	position: absolute
+	width: $w/1130*100%
+	height: $h/645*100%
+	background-position: $pos
+
+	@media(max-width: $tablet)
+		width: 100%
+		height: 100%
+		border: 9px solid white
+		background-position: $pos

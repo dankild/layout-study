@@ -1,0 +1,155 @@
+.content-body
+	& >div
+		margin: 30px auto
+
+	.content-body__row1
+		display: grid
+		min-height: 580px
+		transition: all 2s
+		grid-template-areas: 'a a d d' 'b c d d'
+		grid-template-columns: 25% 25% 25% 25%
+
+		@media(max-width: $mobile)	
+			min-height: 300px
+
+		@mixin picture_config($img, $h)
+			@include bg($img)
+			border: 11px solid white
+			@media(max-width: $tablet)
+				height: $h
+			@media(max-width: $mobile)	
+				height: $h * 0.8
+			
+		.content-body__pic1
+			@include picture_config("row1_1", 250px)
+			grid-area: a
+		
+		.content-body__pic2
+			@include picture_config("row1_2", 400px)
+			grid-area: b
+		
+		.content-body__pic3
+			background-position: left
+			@include picture_config("row1_3", 250px)
+			grid-area: c
+		
+		.content-body__pic4
+			background-position: right
+			position: relative
+			@include picture_config("row1_4", 400px)
+			grid-area: d
+			.text
+				transition: all 1s
+				background-color: white
+				text-transform: uppercase
+				display: inline-block
+				position: absolute
+				left: 28px
+				bottom: 25px
+				padding: 4px 24px
+				@include text_config(18px, 600, 27px)
+
+				@media(max-width: $mobile)					
+					@include text_config(14px, 600, 27px)
+
+		@media(max-width: $tablet)
+			grid-template-areas: 'a a c' 'b d d' 'b d d'
+			grid-template-columns: repeat(3, 1fr)
+
+			.content-body__pic2
+				background-position: 55%
+
+			.content-body__pic3
+				background-position: 20%
+			
+			.content-body__pic4
+				background-position: top right
+		
+
+	.products
+		display: flex
+		flex-direction: column
+		
+		.content-body__text
+			text-align: center
+			@include text_config(15px, 400, 22.5px)
+			margin: 0 0 65px 0
+		
+		.content-body__cards
+			display: grid	
+			grid-template-columns: repeat(4, 1fr)
+			margin: 0 auto
+
+			@media(max-width: $card-bp)
+				grid-template-columns: repeat(2, 1fr)
+
+			@media(max-width: 730px)
+				grid-template-columns: 1fr
+					
+			.pic1
+				grid-area: a
+			.pic2
+				grid-area: b
+			.pic3
+				grid-area: c
+			.pic4
+				grid-area: d
+		
+	.content-body__row4
+		transition: all 1s
+
+		.content-body__pics
+			position: relative
+			height: 690px
+			display: grid
+			transition: all 1s
+			width: 95%
+			margin: 0 auto
+			
+			.pic1
+				@include avone(585, 550, "row4_1", top right)
+				grid-area: a
+				bottom: 0px
+				left: 0px
+			
+			.pic2
+				@include avone(514, 451, "row4_2", top)
+				grid-area: b
+				right: 0px
+			
+			.pic3
+				@include avone(271, 325, "row2_1", top)
+				grid-area: c
+				border: 22px solid white
+				border-bottom: 0
+				border-right: 0
+				bottom: 0px
+				right: 0px
+			
+			.text
+				position: absolute
+				@include text_config(15px, 400, 22.5px)
+				border-bottom: 1px solid black
+				right: 274/1130*100%
+				bottom: 40px
+				padding: 0 0 4px 0
+				@media(max-width: $tablet)
+					padding: 18px
+					background: white
+			
+			@media(max-width: $tablet)
+				opacity: 1.0
+				grid-template-areas: 'a a a b b' 'a a a c c' 'a a a c c'
+				.pic1
+					background-position: 74%
+				.text
+					padding: 18px
+					background: white
+			
+			@media(max-width: $mobile)
+				.pic1
+					background-position: 64%
+				.pic2
+					background-position: 30%
+				.pic3
+					background-position: 30%
